@@ -1,28 +1,28 @@
 # Projects
 
-This repository acts as a project bank for the WeThinkCode_ software engineering curriculum.
+This repository serves as a project bank for the WeThinkCode_ software engineering curriculum.
 
 ## Principles
 
-These projects are designed to be amenable to partial completion - "iterations" are thus a sequence of partial completions, each of which should be a working program.
+These projects are designed to be completed in iterations, allowing for partial completion. Each iteration should result in a working program. Note that these iterations are partial completions of the same project, not separate projects.
 
-The projects are designed to be as open-ended as possible, emphasizing that students should develop confidence in the face of a blank canvas. No unit tests are provided.
+The projects are intentionally open-ended, encouraging students to develop their problem-solving skills. No unit tests are provided.
 
-The only requirement is that the commands in the specification - if any - are implemented correctly. They usually take the form of `./run.sh <input> <input> ...`, such that the student may implement the program in any way they see fit. This means all of the projects can be completed in either Python or Java, or even another programming language.
+The only requirement is that the commands in the specification, if any, are implemented correctly. The format usually follows `./run.sh <input> <input> ...`, allowing students to choose their preferred programming language (e.g., Python, Java).
 
 ### Grading
 
-Automated grading, if it is available for the project, consists exclusively of black-box testing. The automated grader submits a review, in a schema specific to that project, similar to how a human reviewer would.
+Automated grading, if available, is based on black-box testing. The automated grader submits a review using a specific schema for each project, similar to a human reviewer.
 
-I hypothesize that human engagement with student projects _significantly_ improves their level of engagement with the problem. Therefore, human reviews form the bulk of the grading process. Each project comes with a detailed feedback form that the reviewer fills out. These reviews happen continuously.
+Human reviews play a significant role in the grading process. Each project includes a detailed feedback form for the reviewer. Continuous reviews are conducted.
 
-All past reviews are made available to the reviewer, so they can comment on the development of the project over time, or on the quality of those reviews themselves. A student's ability to deliver high quality reviews is a significant part of their overall performance.
+All past reviews are accessible to the reviewer, enabling them to comment on the project's development over time and the quality of the reviews themselves. The ability to provide high-quality reviews is an important aspect of a student's performance.
 
-Students should be able to complete projects multiple times, in the style of a code kata.
+Students are encouraged to complete projects multiple times, similar to code katas.
 
 ### Specification Optional
 
-Narrowing the specification of a project should always be optional for the author, as should automating a particular aspect of the project's review. Peer reviews and trusted reviews should still add a layer of rigour to the project. Ideally, we are able to set two or three completely open-ended projects for students to develop publically on their GitHub. This should be a core learning outcome.
+Narrowing the project's specification and automating specific aspects of the review process are optional for the author. Peer reviews and trusted reviews add rigor to the project. The goal is to have a few completely open-ended projects for students to develop publicly on their GitHub. This is a key learning outcome.
 
 ## Todo
 
