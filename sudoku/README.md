@@ -9,7 +9,9 @@ This is a sudoku solver. The student is encouraged to be creative in designing t
 
 ## State of the project
 
+Basic autoreview is working. The tests need a lot of refinement and the specification needs feedback. Some of my test code is available [here](https://gitlab.wethinkco.de/fen/pysudoku/).
+
 - [x] Ideation
-- [ ] Testing
+- [x] Testing
 - [ ] Documentation
 - [ ] Deployment
