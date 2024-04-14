@@ -6,6 +6,7 @@ This is a simple program that simulates the orbits of planets around a star.
 
 - Parsing and formatting
 - Numerical methods
+- Algebra and calculus
 - Visualization and UX
 
 ## State of the project

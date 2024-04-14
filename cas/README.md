@@ -11,6 +11,7 @@ In this project, students implement a simple computer algebra system (CAS) that 
 
 - Algorithm design
 - Data structures
+- Algebra and calculus
 
 ## State of the project
 
