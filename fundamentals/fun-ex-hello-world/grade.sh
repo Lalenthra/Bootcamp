@@ -6,7 +6,7 @@ fi
 STUDENT_OUTPUT=`python3 $1/greet.py`
 
 if [ "$STUDENT_OUTPUT" == "Hello, world!" ]; then
-    echo "Correct output!"
+    echo "Correct output."
     exit 0
 else
     echo "Incorrect output!"
