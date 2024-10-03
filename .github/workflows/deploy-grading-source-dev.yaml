@@ -21,6 +21,10 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_DEV }}
         aws-region: af-south-1
 
-    - name: Sync to S3
+    - name: Sync Fundamentals to S3
       run: |
         aws s3 sync ./fundamentals s3://${{ secrets.S3_BUCKET_NAME_DEV }} --delete
+
+    - name: Sync Data Engineering to S3
+      run: |
+        aws s3 sync ./dataengineering s3://${{ secrets.S3_BUCKET_NAME_DEV }} --delete

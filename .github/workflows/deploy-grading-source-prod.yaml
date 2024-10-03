@@ -38,3 +38,7 @@ jobs:
     - name: Sync to S3
       run: |
         aws s3 sync ./fundamentals s3://${{ secrets.S3_BUCKET_NAME_PROD }} --delete
+
+    - name: Sync Data Engineering to S3
+      run: |
+        aws s3 sync ./dataengineering s3://${{ secrets.S3_BUCKET_NAME_DEV }} --delete
