@@ -27,7 +27,8 @@ def is_spam_according_to_detector(detector, path_to_email_file):
     elif stdout == "notspam":
         return False
     else:
-        raise ValueError(f"Invalid result from spam detector: {repr({"stdout": stdout, "stderr": stderr})}\n\nI expected 'spam' or 'notspam'.")
+        print(f"Invalid result from spam detector: {repr({"stdout": stdout, "stderr": stderr})}\n\nI expected 'spam' or 'notspam'.")
+        exit(2)
 
 
 # Check the accuracy of the spam detector
