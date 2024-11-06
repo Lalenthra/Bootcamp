@@ -17,14 +17,12 @@ if [ ! -f "$file2" ]; then
     exit 2  # Exit with code 2 for file not found
 fi
 
-# Pattern to match table names (e.g., sales_YYYYMMDD)
-table_pattern="sales_aggregated_[0-9]\{8\}"
-
 # Expected number of entries in the matching table(s)
 expected_count=9
 
-# Query to list tables matching the pattern
-matching_tables=$(sqlite3 "$db_file" ".tables" | grep -E "$table_pattern")
+table_pattern="^sales_aggregated_[0-9]{8}$"
+# List tables, split into lines, and match each line against the pattern
+matching_tables=$(sqlite3 "$file1" ".tables" | tr ' ' '\n' | grep -E "$table_pattern")
 
 # Check if any matching table is found
 if [ -z "$matching_tables" ]; then
@@ -33,9 +31,9 @@ if [ -z "$matching_tables" ]; then
 fi
 
 # Loop through each matching table to check the row count
-for table in $matching_tables; do
+echo "$matching_tables" | while IFS= read -r table; do
     # Get the actual row count for the table
-    row_count=$(sqlite3 "$db_file" "SELECT COUNT(*) FROM $table;")
+    row_count=$(sqlite3 "$file1" "SELECT COUNT(*) FROM $table;")
 
     # Check if the row count meets the expected count
     if [ "$row_count" -eq "$expected_count" ]; then
