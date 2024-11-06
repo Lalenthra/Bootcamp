@@ -40,4 +40,5 @@ fi
 # Clean up temporary dump files
 rm "solution.dump"
 rm "submit.dump"
+# clean up local db file
 rm "$file1"
