@@ -18,7 +18,7 @@ def start_listener():
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
     )
-    time.sleep(1)  # allow some time for the connection
+    time.sleep(45)  # allow some time for the connection
 
     return process
 
