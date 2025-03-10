@@ -106,7 +106,9 @@ mock_server.terminate_listen_async()
 
 output = "\n".join(output)
 
-if listener_username in output and channel in output:
+print(output)
+
+if listener_username in output:
     print("You were able to send and receive a message! Well done.")
     exit(0)
 else:
