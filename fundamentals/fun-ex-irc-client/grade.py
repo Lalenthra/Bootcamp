@@ -13,6 +13,10 @@ sender_username = f"lmss{random.randint(1, 100000)}"
 channel = f"#testing-{random.randint(1, 100000)}"
 message = f"Hello, world! Here's a random number: {random.randint(1, 1000)}"
 
+random_port = random.randint(6000, 7000)
+port_number = os.environ.get("IRC_PORT_NUMBER", str(random_port))
+os.environ["IRC_PORT_NUMBER"] = str(int(port_number) + 1)
+
 # simple mock server that listens for messages
 
 class MockServer:
@@ -50,7 +54,7 @@ class MockServer:
 
 mock_server = MockServer(
     "localhost",
-    6667,
+    int(port_number),
     channel
 )
 
@@ -58,7 +62,7 @@ mock_server = MockServer(
 def start_listener(stdout):
     process = subprocess.Popen(
         ["python3", "irc.py",
-            "listen", "localhost", "6667",
+            "listen", "localhost", port_number,
             channel, listener_username],
         cwd=path_to_submission,
         stdout=stdout,
@@ -75,10 +79,9 @@ def kill_listener(process):
 
 
 def send_message(message):
-    # python3 irc.py send 161.35.35.171 6667 '#programming' 'username'
     process = subprocess.Popen(
         ["python3", "irc.py",
-            "send", "localhost", "6667",
+            "send", "localhost", port_number,
             channel, sender_username],
         cwd=path_to_submission,
         stdin=subprocess.PIPE,
@@ -106,7 +109,7 @@ mock_server.terminate_listen_async()
 
 output = "\n".join(output)
 
-print(output)
+# print(output)
 
 if listener_username in output:
     print("You were able to send and receive a message! Well done.")
