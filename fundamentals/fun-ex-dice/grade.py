@@ -28,7 +28,7 @@ def run_student_submission(dice, faces, rolls, weights, bins):
 correct = True
 
 output, stderr, returncode = run_student_submission(
-    dice="2",
+    dice="5",
     faces="6",
     rolls="1000",
     weights=[1, 2, 3, 2, 1, 5],
@@ -39,6 +39,10 @@ if returncode != 0:
     print("Your program crashed with the following error:")
     print(stderr)
     exit(1)
+
+print("Your output was:")
+print(output)
+print()
 
 if "mean" not in output.lower():
     print("I couldn't see a 'mean' in the output. Make sure you're printing the mean.")
