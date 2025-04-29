@@ -72,3 +72,9 @@ The active color field indicates which player's turn it is to move. The castling
 Your team needs to decide how positions and moves will be represented. This is the core decision of the project, as everybody needs to agree on how it works, and the decisions you make here can considerably influence how difficult it is to write each function. Explore this with your team first, writing some test code together. It would be a mistake to split up the work before agreeing on the data model.
 
 You can split the move-generation task into several smaller tasks, one for each piece type. I suggest starting with knights, as they have the simplest movement rules. You can write this one together before splitting up the rest of the work. Note that queen moves are a combination of rook and bishop moves, so you can implement them last. It's possible to structure your code so that you can reuse the rook and bishop code for the queen moves.
+
+## How you'll be assessed
+
+- **Correctness**: Your code should produce the correct output for all test cases.
+- **Comprehension**: _Everybody_ should understand _all_ the code in the project.
+- **Quality**: We'd like to see a data model that supports the functionality well, and sensible utilization of the Python features you learned throughout the bootcamp.
