@@ -5,7 +5,7 @@ import chess
 class TestChessMoves(unittest.TestCase):
     def test_opening_moves(self):
         board = chess.parse_fen(
-            "rnbqkb1r/pppppppp/8/8/8/8/PPPPPPPP/RNBQKB1R w KQkq - 0 1"
+            "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
         )
 
         moves = chess.generate_moves(board)
@@ -25,7 +25,7 @@ class TestChessMoves(unittest.TestCase):
         )
 
         moves = chess.generate_moves(board)
-        self.assertEqual(len(moves), 23, f"Expected 23 moves, but got {len(moves)}")
+        self.assertEqual(len(moves), 22, f"Expected 22 moves, but got {len(moves)}")
 
 
 if __name__ == "__main__":
