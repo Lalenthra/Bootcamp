@@ -1,9 +1,9 @@
-package wethinkcode.botworld.model;
+package za.co.wethinkcode.botworld.model;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static wethinkcode.botworld.model.Heading.*;
+import static za.co.wethinkcode.botworld.model.Heading.*;
 
 public class ExplorerBotTest
 {
@@ -25,7 +25,7 @@ public class ExplorerBotTest
         assertThrows( IllegalArgumentException.class, () -> new ExplorerBot( ExplorerBot.WORLD_MAX_X + 1, 0 ));
     }
 
-    // This test we leave for you, dear student!
+    // This test we leave for you to write, dear student!
     @Test
     void createBot_initialPositionIsOutsideTheWorld_yTooSmall(){
         fail( "TODO" );
