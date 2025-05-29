@@ -1,4 +1,4 @@
-package wethinkcode.botworld.model;
+package za.co.wethinkcode.wethinkcode.botworld.model;
 
 public record Position( int x, int y )
 {
